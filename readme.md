@@ -1,14 +1,10 @@
-# Logseq Plugin Template React
+# Logseq Plugin Bullet Threading
 
-## Features
-- plug & play boilerplate
-- develop with HMR, empowered by lightning fast Vite ⚡
-- windicss for styling
+Add bullet threading to your active blocks in Logseq.
 
-### How HMR works?
+![](./logo.png)
 
-See vite.config.ts. There is a custom plugin that will write a dev only index.html.
-The index.html will
-- change its base to `http://${config.server.host}:${config.server.port}`
-- attach `/@vite/client` (allows error overlay and connect HMR ws)
-- register react-refresh preamble code
+## How it works
+
+This plugin is a simple wrapper of [dev theme](https://github.com/pengx17/logseq-dev-theme).
+Internally, it will automatically inject `@import url("https://cdn.jsdelivr.net/gh/pengx17/logseq-dev-theme@master/bullet_threading.css);` into the user's document.
