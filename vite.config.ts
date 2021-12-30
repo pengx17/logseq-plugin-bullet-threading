@@ -3,7 +3,7 @@ import { writeFile, mkdir } from "fs/promises";
 import path from "path";
 
 // Hard-coded for now
-// - assume index is "/src/main.tsx"
+// - assume index is "/src/main.ts"
 // - assume body has div#app
 // - preamble code is better read from reactRefresh instead
 const devIndexHtmlPlugin: () => Plugin = () => {
