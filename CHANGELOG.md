@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/pengx17/logseq-plugin-bullet-threading/compare/v1.0.0...v1.0.1) (2022-01-18)
+
+
+### Bug Fixes
+
+* 🐛 LOGO is not displayed in the installed plugin ([773f770](https://github.com/pengx17/logseq-plugin-bullet-threading/commit/773f7708ecbf95818c060534ab3a3e96c71b4edf))
+
 # 1.0.0 (2021-12-30)
 
 
