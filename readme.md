@@ -4,6 +4,9 @@ Add bullet threading to your active blocks in Logseq.
 
 ![](./logo.png)
 
+## Settings
+
+![](./settings.png)
 ## How it works
 
 This plugin is a simple wrapper of [dev theme](https://github.com/pengx17/logseq-dev-theme).

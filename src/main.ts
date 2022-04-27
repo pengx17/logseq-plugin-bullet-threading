@@ -34,11 +34,32 @@ const getCSSFromCDN = (v: string) => {
   ).then((res) => res.text());
 };
 
+function onSettingsChange() {
+  let width = logseq.settings?.width ?? 2;
+  const color = logseq.settings?.customColor && logseq.settings?.color;
+  if (!("" + width).endsWith("px")) {
+    width = width + "px";
+  }
+
+  const vars: [string, string][] = [
+    ["--ls-block-bullet-threading-width-overwrite", width],
+  ];
+
+  if (color) {
+    vars.push(["--ls-block-bullet-threading-active-color-overwrite", color]);
+  }
+
+  const varsString = vars.map((pair) => pair.join(": ") + ";").join("\n");
+
+  logseq.provideStyle({
+    key: PL.id + "-vars",
+    style: `:root { ${varsString} }`,
+  });
+}
+
 async function main() {
-  const width = logseq.settings?.width ?? 2;
-  logseq.provideStyle(`
-  :root { --ls-block-bullet-threading-width-overwrite: ${width}px; }
-  `);
+  onSettingsChange();
+  logseq.onSettingsChanged(onSettingsChange);
 
   // use cached first
   if (persisted) {
@@ -55,7 +76,7 @@ async function main() {
     // fetch from jsDelivr CDN
     const css = await getCSSFromCDN(latestVersion);
     logseq.provideStyle({
-      key: PL.id,
+      key: PL.id + "-styles",
       style: css,
     });
     persist({
@@ -65,4 +86,33 @@ async function main() {
   }
 }
 
-logseq.ready(main).catch(console.error);
+logseq
+  .useSettingsSchema([
+    {
+      key: "width",
+      default: "2px",
+      description: "Width of the bullet threading.",
+      title: "Width of the bullet threading path",
+      type: "enum",
+      enumPicker: "radio",
+      enumChoices: ["1px", "2px", "3px"],
+    },
+    {
+      key: "customColor",
+      default: false,
+      description: "Overwrite threading path color?",
+      title: "Whether or not to overwrite threading path color.",
+      type: "boolean",
+    },
+    {
+      key: "color",
+      default: "",
+      description:
+        "Color of the bullet threading. You need to enable 'Overwrite threading path color?' first",
+      title: "Color of the bullet threading path.",
+      type: "string",
+      inputAs: "color",
+    },
+  ])
+  .ready(main)
+  .catch(console.error);
