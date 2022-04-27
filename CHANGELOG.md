@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/pengx17/logseq-plugin-bullet-threading/compare/v1.0.1...v1.1.0) (2022-04-27)
+
+
+### Features
+
+* allow the user set width/color in the settings ([f52a48f](https://github.com/pengx17/logseq-plugin-bullet-threading/commit/f52a48f6dc523b21a971e4d1b267a694e8159901))
+
 ## [1.0.1](https://github.com/pengx17/logseq-plugin-bullet-threading/compare/v1.0.0...v1.0.1) (2022-01-18)
 
 
