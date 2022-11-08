@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/pengx17/logseq-plugin-bullet-threading/compare/v1.1.0...v1.1.1) (2022-11-08)
+
+
+### Bug Fixes
+
+* update dependencies ([1e02cdf](https://github.com/pengx17/logseq-plugin-bullet-threading/commit/1e02cdf7cf60228533c34d9d75fb6097000dd089))
+
 # [1.1.0](https://github.com/pengx17/logseq-plugin-bullet-threading/compare/v1.0.1...v1.1.0) (2022-04-27)
 
 
