@@ -99,6 +99,10 @@ async function main() {
       .ls-block .ls-block > div > div.items-center::before {
         right: 16px;
       }
+      
+      .bullet-container.as-order-list {
+        width: 22px !important;
+      }
     `)
   }
 }
