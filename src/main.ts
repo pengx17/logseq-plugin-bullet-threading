@@ -1,5 +1,6 @@
 import "@logseq/libs";
 import { logseq as PL } from "../package.json";
+import semver from 'semver';
 
 const KEY = "logseq-bullet-threading";
 
@@ -83,6 +84,22 @@ async function main() {
       css,
       version: latestVersion,
     });
+  }
+
+  // patches
+  const appVersion = await logseq.App.getInfo('version')
+  if (
+    appVersion && semver.valid(appVersion) &&
+    semver.gt(appVersion, '0.9.6')) {
+    logseq.provideStyle(`
+      .ls-block[haschild] > div > .block-content-wrapper::before {
+        left: -13px;
+      }
+      
+      .ls-block .ls-block > div > div.items-center::before {
+        right: 16px;
+      }
+    `)
   }
 }
 
