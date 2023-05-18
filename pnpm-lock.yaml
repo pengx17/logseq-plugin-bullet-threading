@@ -1,23 +1,26 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@logseq/libs': ^0.0.10
+  '@logseq/libs': ^0.0.15
   '@semantic-release/changelog': 6.0.1
   '@semantic-release/exec': 6.0.3
   '@semantic-release/git': 10.0.1
   '@semantic-release/npm': 9.0.1
   '@types/node': 17.0.29
+  '@types/semver': ^7.5.0
   '@typescript-eslint/eslint-plugin': 5.42.1
   '@typescript-eslint/parser': 5.42.1
   conventional-changelog-conventionalcommits: 4.6.3
   eslint: 8.14.0
   semantic-release: 19.0.2
+  semver: 7.5.1
   typescript: 4.6.3
   vite: 2.9.6
   vite-plugin-logseq: ^1.1.2
 
 dependencies:
-  '@logseq/libs': 0.0.10
+  '@logseq/libs': 0.0.15
+  semver: 7.5.1
 
 devDependencies:
   '@semantic-release/changelog': 6.0.1_semantic-release@19.0.2
@@ -25,6 +28,7 @@ devDependencies:
   '@semantic-release/git': 10.0.1_semantic-release@19.0.2
   '@semantic-release/npm': 9.0.1_semantic-release@19.0.2
   '@types/node': 17.0.29
+  '@types/semver': 7.5.0
   '@typescript-eslint/eslint-plugin': 5.42.1_haasqfysmsdpr3gzsms3niryhm
   '@typescript-eslint/parser': 5.42.1_5wsz2tb7zzudmaqxfve53vbauu
   conventional-changelog-conventionalcommits: 4.6.3
@@ -96,8 +100,8 @@ packages:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: true
 
-  /@logseq/libs/0.0.10:
-    resolution: {integrity: sha512-Ah5wAhLcgrlOtk/9nEe11UsqOzvpcEaEWDV+oFD3TIGTeP4mfv2HjDiPYPBGXuMZRgvsW6klQLzzaxMieksXXg==}
+  /@logseq/libs/0.0.15:
+    resolution: {integrity: sha512-Z4YrYGfu8Y3s9LTqVnPGkxlO+KZtP1YalH/A63zYgxP61cV5QtKlnHWNcjsKxsD5CkaSL4MlSN4mf7wNx/Fm0A==}
     dependencies:
       csstype: 3.1.0
       debug: 4.3.4
@@ -361,7 +365,7 @@ packages:
       read-pkg: 5.2.0
       registry-auth-token: 4.2.1
       semantic-release: 19.0.2
-      semver: 7.3.7
+      semver: 7.5.1
       tempy: 1.0.1
     dev: true
 
@@ -415,8 +419,8 @@ packages:
     resolution: {integrity: sha512-wWKOClTTiizcZhXnPY4wikVAwmdYHp8q6DmC+EJUzAMsycb7HB32Kh9RN4+0gExjmPmZSAQjgURXIGATPegAvA==}
     dev: true
 
-  /@types/semver/7.3.13:
-    resolution: {integrity: sha512-21cFJr9z3g5dW8B0CVI9g2O9beqaThGQ6ZFBqHfwhzLDKUxaqTIy3vnfah/UPkfOiF2pLq+tGz+W8RyCskuslw==}
+  /@types/semver/7.5.0:
+    resolution: {integrity: sha512-G8hZ6XJiHnuhQKR7ZmysCeJWE08o8T0AXtk5darsCaTVsYZhhgUrq53jizaR2FvsoeCwJhlmwTjkXBY5Pn/ZHw==}
     dev: true
 
   /@typescript-eslint/eslint-plugin/5.42.1_haasqfysmsdpr3gzsms3niryhm:
@@ -439,7 +443,7 @@ packages:
       ignore: 5.2.0
       natural-compare-lite: 1.4.0
       regexpp: 3.2.0
-      semver: 7.3.8
+      semver: 7.5.1
       tsutils: 3.21.0_typescript@4.6.3
       typescript: 4.6.3
     transitivePeerDependencies:
@@ -513,7 +517,7 @@ packages:
       debug: 4.3.4
       globby: 11.1.0
       is-glob: 4.0.3
-      semver: 7.3.8
+      semver: 7.5.1
       tsutils: 3.21.0_typescript@4.6.3
       typescript: 4.6.3
     transitivePeerDependencies:
@@ -527,14 +531,14 @@ packages:
       eslint: ^6.0.0 || ^7.0.0 || ^8.0.0
     dependencies:
       '@types/json-schema': 7.0.11
-      '@types/semver': 7.3.13
+      '@types/semver': 7.5.0
       '@typescript-eslint/scope-manager': 5.42.1
       '@typescript-eslint/types': 5.42.1
       '@typescript-eslint/typescript-estree': 5.42.1_typescript@4.6.3
       eslint: 8.14.0
       eslint-scope: 5.1.1
       eslint-utils: 3.0.0_eslint@8.14.0
-      semver: 7.3.8
+      semver: 7.5.1
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -1845,7 +1849,7 @@ packages:
     dependencies:
       universalify: 2.0.0
     optionalDependencies:
-      graceful-fs: 4.2.8
+      graceful-fs: 4.2.10
     dev: true
 
   /jsonparse/1.3.1:
@@ -1942,7 +1946,6 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       yallist: 4.0.0
-    dev: true
 
   /magic-string/0.26.1:
     resolution: {integrity: sha512-ndThHmvgtieXe8J/VGPjG+Apu7v7ItcD5mhEIvOscWjPF/ccOiLxHaSuCAS2G+3x4GKsAbT8u7zdyamupui8Tg==}
@@ -2129,7 +2132,7 @@ packages:
     dependencies:
       hosted-git-info: 4.1.0
       is-core-module: 2.9.0
-      semver: 7.3.7
+      semver: 7.5.1
       validate-npm-package-license: 3.0.4
     dev: true
 
@@ -2382,7 +2385,7 @@ packages:
     dev: true
 
   /path/0.12.7:
-    resolution: {integrity: sha1-1NwqUGxM4hl+tIHr/NWzbAFAsQ8=}
+    resolution: {integrity: sha512-aXXC6s+1w7otVF9UletFkFcDsJeO7lSZBPUQhtb5O0xJe8LtYhj/GxldoL09bBj9+ZmE2hNoHqQSFMN5fikh4Q==}
     dependencies:
       process: 0.11.10
       util: 0.10.4
@@ -2625,7 +2628,7 @@ packages:
       p-reduce: 2.1.0
       read-pkg-up: 7.0.1
       resolve-from: 5.0.0
-      semver: 7.3.7
+      semver: 7.5.1
       semver-diff: 3.1.1
       signale: 1.4.0
       yargs: 16.2.0
@@ -2656,21 +2659,12 @@ packages:
     hasBin: true
     dev: true
 
-  /semver/7.3.7:
-    resolution: {integrity: sha512-QlYTucUYOews+WeEujDoEGziz4K6c47V/Bd+LjSSYcA94p+DmINdf7ncaUinThfvZyu13lN9OY1XDxt8C0Tw0g==}
+  /semver/7.5.1:
+    resolution: {integrity: sha512-Wvss5ivl8TMRZXXESstBA4uR5iXgEN/VC5/sOcuXdVLzcdkz4HWetIoRfG5gb5X+ij/G9rw9YoGn3QoQ8OCSpw==}
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
       lru-cache: 6.0.0
-    dev: true
-
-  /semver/7.3.8:
-    resolution: {integrity: sha512-NB1ctGL5rlHrPJtFDVIVzTyQylMLu9N9VICA6HSFJo8MCGVTMW6gfpicwKmmK/dAjTOrqu5l63JJOpDSrAis3A==}
-    engines: {node: '>=10'}
-    hasBin: true
-    dependencies:
-      lru-cache: 6.0.0
-    dev: true
 
   /shebang-command/2.0.0:
     resolution: {integrity: sha512-kHxr2zZpYtdmrN1qDjrrX/Z1rR1kG8Dx+gkpK1G4eXmvXswmcE1hTWBWYUzlraYw1/yZp6YuDY77YtvbN0dmDA==}
@@ -3117,7 +3111,6 @@ packages:
 
   /yallist/4.0.0:
     resolution: {integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==}
-    dev: true
 
   /yaml/1.10.2:
     resolution: {integrity: sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==}
