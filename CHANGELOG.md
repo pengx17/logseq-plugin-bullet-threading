@@ -1,3 +1,10 @@
+## [1.1.4](https://github.com/pengx17/logseq-plugin-bullet-threading/compare/v1.1.3...v1.1.4) (2023-05-27)
+
+
+### Bug Fixes
+
+* order list block item ([30cd3f7](https://github.com/pengx17/logseq-plugin-bullet-threading/commit/30cd3f758186422c8d210cc27b281d6f2168207f))
+
 ## [1.1.2](https://github.com/pengx17/logseq-plugin-bullet-threading/compare/v1.1.1...v1.1.2) (2023-05-18)
 
 
