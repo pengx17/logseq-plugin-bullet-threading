@@ -92,16 +92,33 @@ async function main() {
     appVersion && semver.valid(appVersion) &&
     semver.gt(appVersion, '0.9.6')) {
     logseq.provideStyle(`
+      .bullet-container .bullet {
+        font-size: 1rem;
+      }
       .ls-block[haschild] > div > .block-content-wrapper::before {
         left: -13px;
       }
       
-      .ls-block .ls-block > div > div.items-center::before {
+      .ls-block .ls-block > div > div.block-control-wrap::before {
         right: 16px;
       }
       
       .bullet-container.as-order-list {
         width: 22px !important;
+      }
+      
+      .ls-block.is-order-list[haschild] > div > .block-content-wrapper::before {
+        left: -15px;
+        top: 24px;
+      }
+      
+      .ls-block .block-children > .ls-block.is-order-list::before {
+        top: -0.2rem;
+      }
+      
+      .ls-block .ls-block.is-order-list > div > div.block-control-wrap::before {
+        right: 22px;
+        top: calc(-50% + 0.5rem);
       }
     `)
   }
